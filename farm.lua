@@ -309,10 +309,10 @@ Hyphon_Emulator()
 repeat task.wait() until HyphonReady == true
 
 local function Rejoin()
+	queue_on_teleport([=[
+	queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/thebestpersoneversmh/multifarm/refs/heads/main/farm.lua")()]])
+	]=])
 	game:GetService("TeleportService"):Teleport(10179538382)
-	queue_on_teleport([[
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/thebestpersoneversmh/multifarm/refs/heads/main/farm.lua")()
-					]])
 end
 
 
