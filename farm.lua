@@ -14,6 +14,23 @@ if not game:GetService("Players").LocalPlayer.Character then
     game:GetService("Players").LocalPlayer.CharacterAdded:Wait()
 end
 
+if game:GetService("ReplicatedFirst"):FindFirstChild("Intro") then 
+	task.spawn(function()
+		if (getgenv().Auto_Rejoiner) then
+			local IntroUI = PlayerGui:FindFirstChild("IntroUI")
+			if IntroUI then
+				local PlayButton = IntroUI:FindFirstChild("SurfaceGui"):FindFirstChild("Frame"):FindFirstChild("Play")
+				task.wait(15)
+				repeat
+					getconnections(PlayButton.MouseButton1Click)[1]:Fire()
+					task.wait(.25)
+				until not PlayerGui:FindFirstChild("IntroUI")
+			end
+			task.wait(60)
+		end
+	end)
+end
+
 local Players = cloneref(game:GetService("Players"))
 local VirtualInputManager = cloneref(game:GetService("VirtualInputManager"))
 local LogService = cloneref(game:GetService("LogService"))
