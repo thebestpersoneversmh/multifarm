@@ -291,11 +291,11 @@ Hyphon_Emulator()
 
 repeat task.wait() until HyphonReady == true
 
-local TheScript
-
 local function Rejoin()
 	game:GetService("TeleportService"):Teleport(10179538382)
-	queue_on_teleport(TheScript)
+	queue_on_teleport([[
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/thebestpersoneversmh/multifarm/refs/heads/main/farm.lua")()
+					]])
 end
 
 
