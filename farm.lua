@@ -8,7 +8,7 @@ if not ok or val ~= "ImKindaGay" then
 end
 
 print("it FUCKING RETURNED omg nigga boy")
-
+local fucknigga = tick()
 repeat task.wait() until game:IsLoaded()
 if not game:GetService("Players").LocalPlayer.Character then 
     game:GetService("Players").LocalPlayer.CharacterAdded:Wait()
@@ -30,6 +30,8 @@ if game:GetService("ReplicatedFirst"):FindFirstChild("Intro") then
 		end
 	end)
 end
+
+repeat task.wait() until (tick() - fucknigga) > 10
 
 local Players = cloneref(game:GetService("Players"))
 local VirtualInputManager = cloneref(game:GetService("VirtualInputManager"))
